@@ -289,6 +289,10 @@ input {
   color: #727C85;
 }
 
+.hint {
+  margin-bottom: 2.5em;
+}
+
 
 /* 404 Error */
 
