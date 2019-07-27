@@ -4,13 +4,5 @@ html(lang="en")
     title Flash Cards
     link(rel='stylesheet', href='/static/stylesheets/style.css')
   body
-    header
-      h1 Flash Cards
-      if name
-        h2 Welcome, #{name}!
-    block content
-    footer
-      if name
-        form(action="/goodbye", method="post")
-          button(type="submit") I'm Done
-      p An app to help you study. 
+    include includes/header.pug
+    block main
