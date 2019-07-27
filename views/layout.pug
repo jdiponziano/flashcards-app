@@ -5,8 +5,11 @@ html(lang="en")
   body
     header
       h1 Flash Cards
+      if name
+        h2 Welcome, #{name}!
     block content
     footer
-      form(action="/goodbye", method="post")
-        button(type="submit") I'm Done
+      if name
+        form(action="/goodbye", method="post")
+          button(type="submit") I'm Done
       p An app to help you study. 
