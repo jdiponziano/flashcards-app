@@ -6,4 +6,7 @@ block content
     if hint 
       p
         i Hint: #{hint}
-    a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
+    p
+      a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
+    p
+      a(href='/cards') Next Card
