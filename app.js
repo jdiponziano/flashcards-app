@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const mainRoutes = require('./routes');
 const cardRoutes = require('./routes/cards');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -28,4 +28,4 @@ app.use((err, req, res) => {
   res.render('error');
 });
 
-app.listen(port, () => console.log(`Application is running on localhost:${port}!`));
+app.listen(port, () => console.log(`Application is running on ${port}!`));
